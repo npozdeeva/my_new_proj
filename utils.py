@@ -39,7 +39,7 @@ def get_formatted_data(data):
             from_bill = f"{from_bill[:4]} {from_bill[4:6]}** **** {from_bill[-4:]}"
             from_info = "".join(sender)
         to = f"{row['to'].split()[0]} **{row['to'][-4:]}"
-        operation_amount = f"{row['operationAmount']['amount']} {row['operationAmount']['currency']}"
+        operation_amount = f"{row['operationAmount']['amount']} "
         formatted_data.append(f"""\
 {date} {description}
 {from_info} {from_bill} -> {to}
